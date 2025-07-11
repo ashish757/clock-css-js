@@ -5,6 +5,12 @@ let minutes = document.querySelector('.minutes');
 let seconds = document.querySelector('.seconds');
 let spans = document.querySelectorAll('span');
 
+let bg = document.querySelectorAll('.strip > div');
+bg.forEach(e => {
+    e.style.height = `${spans[0].clientHeight}px`;
+});
+
+
 function getTimeElement(timeType, value) {
     let type;
     if (timeType === 'h') type = hours;
